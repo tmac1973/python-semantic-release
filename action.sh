@@ -85,6 +85,7 @@ if [[ -n $SSH_PUBLIC_SIGNING_KEY && -n $SSH_PRIVATE_SIGNING_KEY ]]; then
 	git config --global gpg.format ssh
 	git config --global user.signingKey ~/.ssh/signing_key
 	git config --global commit.gpgsign true
+	git config --global tag.gpgSign true
 	git config --global user.email $GIT_COMMITTER_EMAIL
 	git config --global user.name $GIT_COMMITTER_NAME
 	touch ~/.ssh/allowed_signers
